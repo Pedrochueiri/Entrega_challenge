@@ -32,7 +32,7 @@ function App() {
         }}>
         <Stack.Screen name="Login" component={LoginScreen} 
         />
-        <Stack.Screen name="Criar Usuário" component={CreateUser} options={{ headerShown: true, headerTintColor: 'white',}}/>
+        <Stack.Screen name="Criar Usuário" component={CreateUser} options={{ headerShown: true, headerTintColor: 'orange',}}/>
         <Stack.Screen
           name="Chat List"
           component={ChatList}

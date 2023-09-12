@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
    button: {
     marginTop: '0.8rem',
     marginLeft: '17.1rem',
-    backgroundColor: '#50C878',
+    backgroundColor: '#222222',
     padding: '0.3rem',
     borderRadius: '10.0rem',
     flexDirection: 'row',
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     transform: [{ translateX: '-3.75rem' }, { translateY: '0.813rem' }],
     fontSize: '1.5rem',
     fontWeight: 'bold',
-    color: '#fff',
+    color: 'orange',
   },
 });
 

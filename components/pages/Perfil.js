@@ -117,37 +117,37 @@ function Perfil({ onClose, onSave }) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View>
+      <View style={styles.header}>
         <Text style={styles.title}>Perfil</Text>
         <TouchableOpacity
           style={styles.button2}
           onPress={() => setShowModal(true)}>
           <MaterialIcons name="menu" size={24} color="#fff" style={styles.icon}/>
         </TouchableOpacity>
-        <Modal visible={showModal} animationType="fade" transparent={true} onRequestClose={() => setShowModal(false)}>
-          <View style={styles.modal}>
-            <TouchableOpacity style={styles.modalOption} onPress={handlePeril}>
-              <Text style={styles.modalOptionText}>Perfil</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.modalOption} onPress={handleConfig}>
-              <Text style={styles.modalOptionText}>Configurações</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.modalOption} onPress={handleTitle}>
-              <Text style={styles.modalOptionText}>Home</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.modalOption}
-              onPress={handleSignOut}>
-              <Text style={styles.modalOptionText}>Sair</Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.modalCloseButton}
-              onPress={() => setShowModal(false)}>
-              <MaterialIcons name="menu" size={24} color="white" />
-            </TouchableOpacity>
-          </View>
-        </Modal>
       </View>
+      <Modal visible={showModal} animationType="fade" transparent={true} onRequestClose={() => setShowModal(false)}>
+        <View style={styles.modal}>
+          <TouchableOpacity style={styles.modalOption} onPress={handlePeril}>
+            <Text style={styles.modalOptionText}>Perfil</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.modalOption} onPress={handleConfig}>
+            <Text style={styles.modalOptionText}>Configurações</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.modalOption} onPress={handleTitle}>
+            <Text style={styles.modalOptionText}>Home</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.modalOption}
+            onPress={handleSignOut}>
+            <Text style={styles.modalOptionText}>Sair</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.modalCloseButton}
+            onPress={() => setShowModal(false)}>
+            <MaterialIcons name="menu" size={24} color="white" />
+          </TouchableOpacity>
+        </View>
+      </Modal>
       <View style={styles.profileContainer}>
         <View style={styles.profilePictureContainer}>
           <TouchableOpacity onPress={() => alert('Alterar foto')}>
@@ -209,13 +209,17 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#222222',
   },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 20,
+  },
   title: {
-    position: 'absolute',
-    left: '50%',
-    transform: [{ translateX: '-3.75rem' }, { translateY: '0.813rem' }],
-    fontSize: '1.5rem',
+    fontSize: 24,
     fontWeight: 'bold',
     color: '#fff',
+    marginLeft: 850,
   },
   button: {
     marginLeft: 'auto',
@@ -243,7 +247,7 @@ const styles = StyleSheet.create({
   },
   profileEmail: {
     fontSize: '1rem',
-    color: 'black',
+    color: 'white',
   },
   menuContainer: {
     padding: '1.25rem',
@@ -307,18 +311,17 @@ const styles = StyleSheet.create({
   },
   modalCloseButton: {
     position: 'absolute',
-    marginTop: '1.9rem',
+    marginTop: '2.0rem',
     marginLeft: '18.0rem',
     marginBottom: '45.0rem',
   },
-   button2: {
-    marginTop: '0.8rem',
-    marginLeft: '18.3rem',
-    backgroundColor: '#50C878',
-    padding: '0.3rem',
-    borderRadius: '10.0rem',
-    flexDirection: 'row',
-    alignItems: 'center',
+  button2: {
+    backgroundColor: '#222222',
+    padding: 5,
+    borderRadius: 10,
+  },
+  icon: {
+    marginRight: 800,
   },
 });
 
